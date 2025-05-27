@@ -1,76 +1,22 @@
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-
-import { Button } from "@/components/ui/button";
 export default function Home() {
   return (
-    <div>
-      <Carousel>
-        <CarouselContent>
-          <CarouselItem>
-            <Card>
-              <CardHeader>
-                <CardTitle>Card Title</CardTitle>
-                <CardDescription>Card Description</CardDescription>
-              </CardHeader>
-              <CardContent>
-                      <Button>Click me</Button>
-
-                <p>Card Content</p>
-              </CardContent>
-              <CardFooter>
-                <p>Card Footer</p>
-              </CardFooter>
-            </Card>
-          </CarouselItem>
-          <CarouselItem>
-            {" "}
-            <Card>
-              <CardHeader>
-                <CardTitle>Card Title</CardTitle>
-                <CardDescription>Card Description</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p>Card Content</p>
-              </CardContent>
-              <CardFooter>
-                <p>Card Footer</p>
-              </CardFooter>
-            </Card>
-          </CarouselItem>
-          <CarouselItem>
-            {" "}
-            <Card>
-              <CardHeader>
-                <CardTitle>Card Title</CardTitle>
-                <CardDescription>Card Description</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p>Card Content</p>
-              </CardContent>
-              <CardFooter>
-                <p>Card Footer</p>
-              </CardFooter>
-            </Card>
-          </CarouselItem>
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+      {/*Navbar*/}
+      <div></div>
+      {/*Main Content*/}
+      <div className="grid grid-cols-4 grid-rows-3 gap-0">
+        {/* Row 1: Cards */}
+        <div className="col-span-1 row-span-1">Card 1</div>
+        <div className="col-span-1 row-span-1">Card 2</div>
+        <div className="col-span-1 row-span-1">Card 3</div>
+        <div className="col-span-1 row-span-1">Card 4</div>
+        {/* Row 2: Graph 1 spans 3 columns, Graph 2 spans 1 column */}
+        <div className="col-span-3 row-span-1">Graph 1</div>
+        <div className="col-span-1 row-span-1">Graph 2</div>
+        {/* Row 3: Graph 3 spans 2 columns, Graph 4 spans 2 columns */}
+        <div className="col-span-2 row-span-1">Graph 3</div>
+        <div className="col-span-2 row-span-1">Graph 4</div>
+      </div>
     </div>
   );
 }
